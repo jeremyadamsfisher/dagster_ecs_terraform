@@ -11,5 +11,7 @@ RUN mkdir -p $DAGSTER_HOME
 COPY dagster.yaml $DAGSTER_HOME
 
 COPY workspace.yaml.ecs $DAGSTER_HOME/workspace.yaml
+ARG USER_WORKSPACE
+RUN sed -i s/USER_WORKSPACE/$USER_WORKSPACE/g $DAGSTER_HOME/workspace.yaml
 
 WORKDIR $DAGSTER_HOME
