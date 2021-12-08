@@ -1,0 +1,21 @@
+FROM python:3.8-slim
+
+COPY requirements-dagster.txt
+
+RUN pip install --no-cache-dir -r requirements-dagster.txt
+
+COPY requirements-pipelines.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+ENV DAGSTER_HOME=/opt/dagster/dagster_home
+
+RUN mkdir -p $DAGSTER_HOME
+
+COPY dagster.yaml $DAGSTER_HOME
+
+WORKDIR /opt/dagster/app
+
+COPY ./pipeline /opt/dagster/app
+
+EXPOSE 4000

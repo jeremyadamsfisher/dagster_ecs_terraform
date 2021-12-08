@@ -1,0 +1,7 @@
+load_from:
+  - grpc_server:
+      host: localhost
+      port: 4000
+      # `location_name` is should be changed in the docker build script
+      # See: terraform/ecr.tf
+      location_name: USER_WORKSPACE

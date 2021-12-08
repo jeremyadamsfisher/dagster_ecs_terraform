@@ -1,0 +1,8 @@
+# Dagster and dagster dependencies should be kept in sync
+dagster==0.13.10
+dagster-graphql==0.13.10
+dagit==0.13.10
+dagster-postgres==0.13.10
+dagster-docker==0.13.10
+dagster-aws==0.13.10
+
