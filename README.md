@@ -1,5 +1,9 @@
 # Dagster ECS Terraform
 
+THIS PROJECT HAS NOT EVEN BEEN SMOKE TESTED! I adapted it from an interaction I had on the dagster slack channel. Contributions to push it over the ledge into being actually useful (assuming there are bugs) are very welcome!
+
+Anyways...
+
 This project demonstrates running Dagster on ECS by leveraging Terraform
 
 It can also be run locally:
@@ -31,4 +35,4 @@ I find the ECS interface pretty bare-bones, so there's a lot that needs to be ad
 
 ## TODO
 
-[ ] Any non-trivial pipeline needs an IO manager backed by a bucket. I wrote the IAM permissions allow access to all buckets for this reason, but it should really only have access to one bucket (which I don't even have in the terraform...)
+[] Any non-trivial pipeline needs an IO manager backed by a bucket. I wrote the IAM permissions allow access to all buckets for this reason, but it should really only have access to one bucket (which I don't even have in the terraform...)
